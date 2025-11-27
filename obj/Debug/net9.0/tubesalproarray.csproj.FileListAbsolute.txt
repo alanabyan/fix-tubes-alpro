@@ -1,0 +1,14 @@
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.AssemblyInfo.cs
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\bin\Debug\net9.0\tubesalproarray.exe
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\bin\Debug\net9.0\tubesalproarray.deps.json
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\bin\Debug\net9.0\tubesalproarray.runtimeconfig.json
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\bin\Debug\net9.0\tubesalproarray.dll
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\bin\Debug\net9.0\tubesalproarray.pdb
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.dll
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\refint\tubesalproarray.dll
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.pdb
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\tubesalproarray.genruntimeconfig.cache
+C:\Users\admin\Documents\Belajar C++\tubesalproarray\obj\Debug\net9.0\ref\tubesalproarray.dll
