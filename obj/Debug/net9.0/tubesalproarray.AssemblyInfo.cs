@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tubesalproarray")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac06c1ed72ca90b9f8f92a6a1fb8360ccf4ee0ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("tubesalproarray")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tubesalproarray")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
