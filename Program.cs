@@ -32,7 +32,30 @@ class Program
             Console.WriteLine("6. Filter by Category");
             Console.WriteLine("7. Exit");
             Console.Write("Choose menu: ");
-            int choice = int.Parse(Console.ReadLine()!);
+
+            int choice = 0;
+
+            Console.Write("Choose menu: ");
+            string? input = Console.ReadLine();
+
+            try
+            {
+                choice = int.Parse(input!);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("\n❌ Input harus berupa angka! Silahkan coba lagi.");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                continue;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\n❌ Terjadi error: {ex.Message}");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                continue;
+            }
 
             Console.Clear();
 
@@ -45,7 +68,7 @@ class Program
                 case 5: SearchProduct(); break;
                 case 6: FilterByCategory(); break;
                 case 7: return;
-                default: Console.WriteLine("Invalid choice!"); break;
+                default: Console.WriteLine("Pilihan menu tidak tersedia!"); break;
             }
 
             Console.WriteLine("\nPress any key to continue...");
