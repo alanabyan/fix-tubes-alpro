@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\tubesalproarray.csproj",
       "projectName": "tubesalproarray",
-      "projectPath": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\tubesalproarray.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
