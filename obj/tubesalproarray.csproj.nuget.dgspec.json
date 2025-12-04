@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\tubesalproarray.csproj": {}
+    "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\tubesalproarray.csproj": {
+    "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\tubesalproarray.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj",
         "projectName": "tubesalproarray",
-        "projectPath": "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\tubesalproarray.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Documents\\Belajar C++\\tubesalproarray\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

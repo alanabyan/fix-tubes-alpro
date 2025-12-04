@@ -115,6 +115,6 @@ class Program
 
     static void FilterByCategory()
     {
-        
+        Console.WriteLine("mas");
     }
 }
