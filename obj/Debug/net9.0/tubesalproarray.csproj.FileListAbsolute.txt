@@ -28,3 +28,18 @@ C:\Users\Brigitha Evelyne\fix-tubes-alpro\obj\Debug\net9.0\refint\tubesalproarra
 C:\Users\Brigitha Evelyne\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.pdb
 C:\Users\Brigitha Evelyne\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.genruntimeconfig.cache
 C:\Users\Brigitha Evelyne\fix-tubes-alpro\obj\Debug\net9.0\ref\tubesalproarray.dll
+C:\Users\HP\Documents\fix-tubes-alpro\bin\Debug\net9.0\tubesalproarray.exe
+C:\Users\HP\Documents\fix-tubes-alpro\bin\Debug\net9.0\tubesalproarray.deps.json
+C:\Users\HP\Documents\fix-tubes-alpro\bin\Debug\net9.0\tubesalproarray.runtimeconfig.json
+C:\Users\HP\Documents\fix-tubes-alpro\bin\Debug\net9.0\tubesalproarray.dll
+C:\Users\HP\Documents\fix-tubes-alpro\bin\Debug\net9.0\tubesalproarray.pdb
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.AssemblyInfo.cs
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.sourcelink.json
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.dll
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\refint\tubesalproarray.dll
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.pdb
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\tubesalproarray.genruntimeconfig.cache
+C:\Users\HP\Documents\fix-tubes-alpro\obj\Debug\net9.0\ref\tubesalproarray.dll

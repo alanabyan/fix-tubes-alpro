@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brigitha Evelyne\\fix-tubes-alpro\\tubesalproarray.csproj": {}
+    "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brigitha Evelyne\\fix-tubes-alpro\\tubesalproarray.csproj": {
+    "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brigitha Evelyne\\fix-tubes-alpro\\tubesalproarray.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj",
         "projectName": "tubesalproarray",
-        "projectPath": "C:\\Users\\Brigitha Evelyne\\fix-tubes-alpro\\tubesalproarray.csproj",
-        "packagesPath": "C:\\Users\\Brigitha Evelyne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brigitha Evelyne\\fix-tubes-alpro\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\tubesalproarray.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\fix-tubes-alpro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Brigitha Evelyne\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -203,6 +203,43 @@ class Program
 
     static void FilterByCategory()
     {
-        Console.WriteLine("mas");
+
+    Console.WriteLine("--- FILTER BY CATEGORY ---\n");
+
+    if (count == 0)
+    {
+        Console.WriteLine("Tidak ada produk dalam sistem.");
+        return;
+    }
+
+    for (int i = 0; i < categories.Length; i++)
+        Console.WriteLine((i + 1) + ". " + categories[i]);
+
+    Console.Write("Pilih kategori: ");
+    int pilih = int.Parse(Console.ReadLine());
+
+    if (pilih < 1 || pilih > categories.Length)
+    {
+        Console.WriteLine("Pilihan kategori tidak valid.");
+        return;
+    }
+
+    string kategori = categories[pilih - 1];
+    bool ada = false;
+
+    Console.WriteLine("\n--- Produk kategori: " + kategori + " ---\n");
+
+    for (int i = 0; i < count; i++)
+        if (products[i].Category == kategori)
+        {
+            Console.WriteLine("ID: " + products[i].Id +
+                              " | " + products[i].Name +
+                              " | Stock: " + products[i].Stock +
+                              " | Price: Rp " + products[i].Price.ToString("N0"));
+            ada = true;
+        }
+
+    if (!ada) Console.WriteLine("Tidak ada produk dalam kategori ini.");
+
     }
 }
