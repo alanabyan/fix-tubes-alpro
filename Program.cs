@@ -85,7 +85,68 @@ class Program
 
     static void AddProduct()
     {
+        Console.WriteLine ("---ADD PRODUCT---\n");
+
+        int id;
+        while(true)
+        {
+            Console.Write("Input ID: ");
+            if(int.TryParse(Console.ReadLine(), out id))
+            break;
+
+            Console.WriteLine("ID harus berupa angka!");
+        }
+        Console.Write("Input Nama: ");
+        string name = Console.ReadLine()!;
+
+        int stock;
+        while(true)
+        {
+            Console.Write("Input Stock: ");
+            if(int.TryParse(Console.ReadLine(), out stock))
+            break;
+
+            Console.WriteLine("Stock harus berupa angka!");
+        }
+
+        decimal price;
+        while(true)
+        {
+            Console.Write("Input Price (RP): ");
+            if(decimal.TryParse(Console.ReadLine(), out price));
+            break;
+
+            Console.WriteLine("Harga harus berupa angka!");
+        }
+
+        Console.WriteLine("\nPilih Category: ");
+        for(int i = 0; i<categories.Length; i++)
+            Console.WriteLine($"{i + 1}. {categories[i]}");
         
+        int catChoice;
+        string category = "";
+        while(true)
+        {
+            Console.Write("Input Pilihan Category (1-bebas)");
+            if (int.TryParse(Console.ReadLine(), out catChoice)&& catChoice >= 1 && catChoice <= categories.Length)
+            {
+                category = categories[catChoice - 1];
+                break;
+            }
+            Console.WriteLine("Pilihan Kategori tidak valid!");
+        }
+        products[count]= new Product
+        {
+            Id = id,
+            Name = name,
+            Stock = stock,
+            Price = price,
+            Category = category
+        };
+
+        count++;
+
+        Console.WriteLine("\nProduk berhasil ditambahkan");
     }
 
     static void EditProduct()
@@ -95,7 +156,44 @@ class Program
 
     static void DeleteProduct()
     {
-       
+      Console.WriteLine("----DELETE PRODUCT----");
+
+      if(count == 0)
+        {
+            Console.WriteLine("Tidak ada proudct untuk dihapus");
+            return;
+        }
+        int id;
+        while(true)
+        {
+            Console.Write("Input ID produk yang ingin dihapus: ");
+            if(int.TryParse(Console.ReadLine(), out id))
+            break;
+
+            Console.WriteLine("ID harus berupa angka!");
+        }
+        int index = -1;
+        for(int i = 0; i < count; i++)
+        {
+            if(products[i].Id == id)
+            {
+                index = i;
+                break;
+            }
+        }
+        if (index == -1)
+        {
+            Console.WriteLine("Produk dengan ID tersebut tidak ditemukan");
+            return;
+        }
+        for (int i = index; i < count - 1; i++)
+        {
+            products[i] = products[i + 1];
+        }
+
+        count--;
+
+        Console.WriteLine("Produk berhasil dihapus!");
     }
 
     static void SearchProduct()
