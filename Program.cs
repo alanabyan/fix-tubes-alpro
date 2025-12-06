@@ -211,8 +211,7 @@ class Program
             for (int i = 0; i < count; i++)
             {
                 string productName = products[i].Name.ToLower();
-
-                if (productName.Contains(searchName))
+                if (productName == searchName)
                 {
                     Console.WriteLine($"Produk ditemukan:");
                     Console.WriteLine($"ID: {products[i].Id}");
@@ -223,16 +222,13 @@ class Program
                     found = true;
                     break; 
                 }
-             }
-
+            }
             if (!found)
             {
                 Console.WriteLine($"Produk dengan nama '{searchName}' tidak ditemukan.");
             }
-
- 
-    }
-
+        }
+    
     static void FilterByCategory()
     {
 
