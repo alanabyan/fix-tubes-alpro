@@ -198,7 +198,39 @@ class Program
 
     static void SearchProduct()
     {
-        
+         Console.WriteLine("--- SEARCH PRODUCT ---");
+        if (count == 0)
+        {
+            Console.WriteLine("Tidak ada produk untuk dicari.");
+            return;
+        }   
+            Console.Write("Masukkan nama produk yang ingin dicari: ");
+            string searchName = Console.ReadLine()!.ToLower();
+            bool found = false;
+            
+            for (int i = 0; i < count; i++)
+            {
+                string productName = products[i].Name.ToLower();
+
+                if (productName.Contains(searchName))
+                {
+                    Console.WriteLine($"Produk ditemukan:");
+                    Console.WriteLine($"ID: {products[i].Id}");
+                    Console.WriteLine($"Nama: {products[i].Name}");
+                    Console.WriteLine($"Category: {products[i].Category}");
+                    Console.WriteLine($"Stock: {products[i].Stock}");
+                    Console.WriteLine($"Price: Rp {products[i].Price:N0}");
+                    found = true;
+                    break; 
+                }
+             }
+
+            if (!found)
+            {
+                Console.WriteLine($"Produk dengan nama '{searchName}' tidak ditemukan.");
+            }
+
+ 
     }
 
     static void FilterByCategory()
