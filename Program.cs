@@ -151,8 +151,128 @@ class Program
 
     static void EditProduct()
     {
-       
+        Console.Clear();
+        Console.WriteLine("---EDIT PRODUCT---\n");
+
+        if (count == 0)
+        {
+            Console.WriteLine("Belum ada data produk!");
+            return;
+        }
+
+        int id;
+        while (true)
+        {
+            try
+            {
+                Console.Write("Masukkan ID Product yang ingin diubah: ");
+                id = int.Parse(Console.ReadLine());
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("Input harus berupa angka! Coba lagi.");
+            }
+        }
+
+        int index = -1;
+        for (int i = 0; i < count; i++)
+        {
+            if (products[i].Id == id)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        if (index == -1)
+        {
+            Console.WriteLine("Product dengan ID tersebut tidak ditemukan!");
+            return;
+        }
+
+
+        Console.WriteLine("\nData Produk Saat Ini:");
+        Console.WriteLine($"Nama     : {products[index].Name}");
+        Console.WriteLine($"Stock    : {products[index].Stock}");
+        Console.WriteLine($"Harga    : {products[index].Price}");
+        Console.WriteLine($"Kategori : {products[index].Category}\n");
+
+        Console.WriteLine("Masukkan data baru (Enter untuk skip):");
+
+        Console.Write("Nama Baru: ");
+        string input = Console.ReadLine()!;
+        if (!string.IsNullOrWhiteSpace(input))
+            products[index].Name = input;
+
+
+        while (true)
+        {
+            Console.Write("Stock Baru: ");
+            input = Console.ReadLine()!;
+            if (string.IsNullOrWhiteSpace(input)) break;
+
+            try
+            {
+                products[index].Stock = int.Parse(input);
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("Stock harus berupa angka!");
+            }
+        }
+
+
+        while (true)
+        {
+            Console.Write("Harga Baru: ");
+            input = Console.ReadLine()!;
+            if (string.IsNullOrWhiteSpace(input)) break;
+
+            try
+            {
+                products[index].Price = decimal.Parse(input);
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("Harga harus berupa angka!");
+            }
+        }
+
+        Console.WriteLine("\nPilih Kategori Baru (Enter untuk skip):");
+
+        for (int i = 0; i < categories.Length; i++)
+            Console.WriteLine($"{i + 1}. {categories[i]}");
+
+        Console.Write("Input Pilihan Category: ");
+
+        input = Console.ReadLine()!;
+        if (!string.IsNullOrWhiteSpace(input))
+        {
+            try
+            {
+                int catChoice = int.Parse(input);
+                if (catChoice >= 1 && catChoice <= categories.Length)
+                {
+                    products[index].Category = categories[catChoice - 1];
+                }
+                else
+                {
+                    Console.WriteLine("Pilihan kategori tidak valid! Kategori tidak diubah.");
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Kategori harus berupa angka! Kategori tidak diubah.");
+            }
+        }
+
+        Console.WriteLine("\nProduk berhasil diperbarui!");
     }
+
+
 
     static void DeleteProduct()
     {
