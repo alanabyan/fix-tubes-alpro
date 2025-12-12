@@ -15,6 +15,7 @@ class Program
 
     static int count = 0;
 
+    static int nextId = 1;
 
     static string[] categories = { "Mainan", "Baju", "Lainnya" };
 
@@ -22,7 +23,6 @@ class Program
     {
         while (true)
         {
-            Console.Clear();
             Console.WriteLine("==== PRODUCT CRUD ====");
             Console.WriteLine("1. Show All Products");
             Console.WriteLine("2. Add Product");
@@ -85,69 +85,130 @@ class Program
 
     static void AddProduct()
     {
-        Console.WriteLine ("---ADD PRODUCT---\n");
+        Console.WriteLine("--- ADD PRODUCT ---");
 
-        int id;
-        while(true)
+        int id = nextId++;
+
+        string name;
+        while (true)
         {
-            Console.Write("Input ID: ");
-            if(int.TryParse(Console.ReadLine(), out id))
-            break;
+            Console.Write("Enter product name: ");
+            name = Console.ReadLine()!;
 
-            Console.WriteLine("ID harus berupa angka!");
+            if (!string.IsNullOrWhiteSpace(name))
+                break;
+
+            Console.WriteLine("Nama tidak boleh kosong! Coba lagi.\n");
         }
-        Console.Write("Input Nama: ");
-        string name = Console.ReadLine()!;
 
         int stock;
-        while(true)
+        while (true)
         {
-            Console.Write("Input Stock: ");
-            if(int.TryParse(Console.ReadLine(), out stock))
-            break;
+            Console.Write("Enter stock: ");
+            string stockInput = Console.ReadLine()!;
 
-            Console.WriteLine("Stock harus berupa angka!");
+            if (string.IsNullOrWhiteSpace(stockInput))
+            {
+                Console.WriteLine("Stock tidak boleh kosong!\n");
+                continue;
+            }
+
+            try
+            {
+                stock = int.Parse(stockInput);
+                if (stock < 0)
+                {
+                    Console.WriteLine("Stock tidak boleh negatif!\n");
+                    continue;
+                }
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("Stock harus berupa angka!\n");
+            }
         }
 
         decimal price;
-        while(true)
+        while (true)
         {
-            Console.Write("Input Price (RP): ");
-            if(decimal.TryParse(Console.ReadLine(), out price));
-            break;
+            Console.Write("Enter price: ");
+            string priceInput = Console.ReadLine()!;
 
-            Console.WriteLine("Harga harus berupa angka!");
-        }
-
-        Console.WriteLine("\nPilih Category: ");
-        for(int i = 0; i<categories.Length; i++)
-            Console.WriteLine($"{i + 1}. {categories[i]}");
-        
-        int catChoice;
-        string category = "";
-        while(true)
-        {
-            Console.Write("Input Pilihan Category (1-bebas)");
-            if (int.TryParse(Console.ReadLine(), out catChoice)&& catChoice >= 1 && catChoice <= categories.Length)
+            if (string.IsNullOrWhiteSpace(priceInput))
             {
-                category = categories[catChoice - 1];
+                Console.WriteLine("Harga tidak boleh kosong!\n");
+                continue;
+            }
+
+            try
+            {
+                price = decimal.Parse(priceInput);
+                if (price < 0)
+                {
+                    Console.WriteLine("Harga tidak boleh negatif!\n");
+                    continue;
+                }
                 break;
             }
-            Console.WriteLine("Pilihan Kategori tidak valid!");
+            catch
+            {
+                Console.WriteLine("Harga harus berupa angka!\n");
+            }
         }
-        products[count]= new Product
+
+        int catIndex = -1;
+
+        while (true)
+        {
+            Console.WriteLine("\nChoose Category:");
+            for (int i = 0; i < categories.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {categories[i]}");
+            }
+
+            Console.Write("Enter category (1 - " + categories.Length + "): ");
+            string input = Console.ReadLine()!;
+
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Input kategori tidak boleh kosong!\n");
+                continue;
+            }
+
+            switch (input)
+            {
+                case "1":
+                    catIndex = 0;
+                    break;
+                case "2":
+                    catIndex = 1;
+                    break;
+                case "3":
+                    catIndex = 2;
+                    break;
+                default:
+                    Console.WriteLine("Kategori tidak valid! Coba lagi.\n");
+                    continue;
+            }
+
+            break; 
+        }
+
+        products[count++] = new Product
         {
             Id = id,
             Name = name,
             Stock = stock,
             Price = price,
-            Category = category
+            Category = categories[catIndex]
         };
 
-        count++;
-
-        Console.WriteLine("\nProduk berhasil ditambahkan");
+        Console.WriteLine("\nProduct added successfully!\n");
     }
+
+
+
 
     static void EditProduct()
     {
