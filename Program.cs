@@ -221,6 +221,9 @@ class Program
             return;
         }
 
+        ShowAll();
+        Console.WriteLine();
+
         int id;
         while (true)
         {
@@ -341,9 +344,13 @@ class Program
 
       if(count == 0)
         {
-            Console.WriteLine("Tidak ada proudct untuk dihapus");
+            Console.WriteLine("Tidak ada product untuk dihapus");
             return;
         }
+
+        ShowAll();
+        Console.WriteLine();
+
         int id;
         while(true)
         {
