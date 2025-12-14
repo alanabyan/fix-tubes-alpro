@@ -51,12 +51,12 @@ class Program
 
             switch (choice_0206)
             {
-                case 1: ShowAll(); break;
-                case 2: AddProduct(); break;
-                case 3: EditProduct(); break;
-                case 4: DeleteProduct(); break;
-                case 5: SearchProduct(); break;
-                case 6: FilterByCategory(); break;
+                case 1: ShowAll_0206(); break;
+                case 2: AddProduct_0206(); break;
+                case 3: EditProduct_0206(); break;
+                case 4: DeleteProduct_0206(); break;
+                case 5: SearchProduct_0206(); break;
+                case 6: FilterByCategory_0206(); break;
                 case 7: return;
                 default: Console.WriteLine("\nPilihan menu tidak tersedia!"); break;
             }
@@ -66,7 +66,7 @@ class Program
         }
     }
 
-    static void ShowAll()
+    static void ShowAll_0206()
     {
         Console.WriteLine("--- LIST PRODUCTS ---\n");
 
@@ -83,11 +83,11 @@ class Program
         }
     }
 
-    static void AddProduct()
+    static void AddProduct_0206()
     {
         Console.WriteLine("--- ADD PRODUCT ---");
 
-        int id = nextId_0206++;
+        int id_0206 = nextId_0206++;
 
         string name_0206;
         while (true)
@@ -197,7 +197,7 @@ class Program
 
         products_0206[count_0206++] = new Product
         {
-            Id = id,
+            Id = id_0206,
             Name = name_0206,
             Stock = stock_0206,
             Price = price_0206,
@@ -210,7 +210,7 @@ class Program
 
 
 
-    static void EditProduct()
+    static void EditProduct_0206()
     {
         Console.Clear();
         Console.WriteLine("---EDIT PRODUCT---\n");
@@ -221,7 +221,7 @@ class Program
             return;
         }
 
-        ShowAll();
+        ShowAll_0206();
         Console.WriteLine();
 
         int id_0206;
@@ -338,7 +338,7 @@ class Program
 
 
 
-    static void DeleteProduct()
+    static void DeleteProduct_0206()
     {
         Console.WriteLine("----DELETE PRODUCT----");
 
@@ -348,7 +348,7 @@ class Program
             return;
         }
 
-        ShowAll();
+        ShowAll_0206();
         Console.WriteLine();
 
         int id_0206;
@@ -390,7 +390,7 @@ class Program
         Console.WriteLine("Produk berhasil dihapus!");
     }
 
-    static void SearchProduct()
+    static void SearchProduct_0206()
     {
         Console.Write("Enter keyword: ");
         string keyword_0206 = Console.ReadLine()!.ToLower();
@@ -410,7 +410,7 @@ class Program
             Console.WriteLine($"ID: {p_0206.Id}, {p_0206.Name}, Category: {p_0206.Category}, Rp {p_0206.Price:N0}");
     }
 
-    static void FilterByCategory()
+    static void FilterByCategory_0206()
     {
         Console.WriteLine("--- FILTER BY CATEGORY ---\n");
 
