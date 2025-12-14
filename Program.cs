@@ -76,10 +76,10 @@ class Program
             return;
         }
 
-        for (int i = 0; i < count_0206; i++)
+        for (int i_0206 = 0; i_0206 < count_0206; i_0206++)
         {
-            var p = products_0206[i];
-            Console.WriteLine($"ID: {p.Id} | {p.Name} | Category: {p.Category} | Stock: {p.Stock} | Price: Rp {p.Price:N0}");
+            var p_0206 = products_0206[i_0206];
+            Console.WriteLine($"ID: {p_0206.Id} | {p_0206.Name} | Category: {p_0206.Category} | Stock: {p_0206.Stock} | Price: Rp {p_0206.Price:N0}");
         }
     }
 
