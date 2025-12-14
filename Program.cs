@@ -11,13 +11,13 @@ class Product
 
 class Program
 {
-    static Product[] products = new Product[50];
+    static Product[] products_0206 = new Product[50];
 
-    static int count = 0;
+    static int count_0206 = 0;
 
-    static int nextId = 1;
+    static int nextId_0206 = 1;
 
-    static string[] categories = { "Mainan", "Baju", "Lainnya" };
+    static string[] categories_0206 = { "Mainan", "Baju", "Lainnya" };
 
     static void Main()
     {
@@ -33,11 +33,11 @@ class Program
             Console.WriteLine("7. Exit");
             Console.Write("Choose menu: ");
 
-            int choice = 0;
+            int choice_0206 = 0;
 
             try
             {
-                choice = int.Parse(Console.ReadLine()!);
+                choice_0206 = int.Parse(Console.ReadLine()!);
             }
             catch (FormatException)
             {
@@ -49,7 +49,7 @@ class Program
 
             Console.Clear();
 
-            switch (choice)
+            switch (choice_0206)
             {
                 case 1: ShowAll(); break;
                 case 2: AddProduct(); break;
@@ -70,15 +70,15 @@ class Program
     {
         Console.WriteLine("--- LIST PRODUCTS ---\n");
 
-        if (count == 0)
+        if (count_0206 == 0)
         {
             Console.WriteLine("Tidak ada produk yang tersedia");
             return;
         }
 
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < count_0206; i++)
         {
-            var p = products[i];
+            var p = products_0206[i];
             Console.WriteLine($"ID: {p.Id} | {p.Name} | Category: {p.Category} | Stock: {p.Stock} | Price: Rp {p.Price:N0}");
         }
     }
@@ -87,27 +87,27 @@ class Program
     {
         Console.WriteLine("--- ADD PRODUCT ---");
 
-        int id = nextId++;
+        int id = nextId_0206++;
 
-        string name;
+        string name_0206;
         while (true)
         {
             Console.Write("Enter product name: ");
-            name = Console.ReadLine()!;
+            name_0206 = Console.ReadLine()!;
 
-            if (!string.IsNullOrWhiteSpace(name))
+            if (!string.IsNullOrWhiteSpace(name_0206))
                 break;
 
             Console.WriteLine("Nama tidak boleh kosong! Coba lagi.\n");
         }
 
-        int stock;
+        int stock_0206;
         while (true)
         {
             Console.Write("Enter stock: ");
-            string stockInput = Console.ReadLine()!;
+            string stockInput_0206 = Console.ReadLine()!;
 
-            if (string.IsNullOrWhiteSpace(stockInput))
+            if (string.IsNullOrWhiteSpace(stockInput_0206))
             {
                 Console.WriteLine("Stock tidak boleh kosong!\n");
                 continue;
@@ -115,8 +115,8 @@ class Program
 
             try
             {
-                stock = int.Parse(stockInput);
-                if (stock < 0)
+                stock_0206 = int.Parse(stockInput_0206);
+                if (stock_0206 < 0)
                 {
                     Console.WriteLine("Stock tidak boleh negatif!\n");
                     continue;
@@ -129,13 +129,13 @@ class Program
             }
         }
 
-        decimal price;
+        decimal price_0206;
         while (true)
         {
             Console.Write("Enter price: ");
-            string priceInput = Console.ReadLine()!;
+            string priceInput_0206 = Console.ReadLine()!;
 
-            if (string.IsNullOrWhiteSpace(priceInput))
+            if (string.IsNullOrWhiteSpace(priceInput_0206))
             {
                 Console.WriteLine("Harga tidak boleh kosong!\n");
                 continue;
@@ -143,8 +143,8 @@ class Program
 
             try
             {
-                price = decimal.Parse(priceInput);
-                if (price < 0)
+                price_0206 = decimal.Parse(priceInput_0206);
+                if (price_0206 < 0)
                 {
                     Console.WriteLine("Harga tidak boleh negatif!\n");
                     continue;
@@ -157,54 +157,54 @@ class Program
             }
         }
 
-        int catIndex = -1;
+        int catIndex_0206 = -1;
 
         while (true)
         {
             Console.WriteLine("\nChoose Category:");
-            for (int i = 0; i < categories.Length; i++)
+            for (int i_0206 = 0; i_0206 < categories_0206.Length; i_0206++)
             {
-                Console.WriteLine($"{i + 1}. {categories[i]}");
+                Console.WriteLine($"{i_0206 + 1}. {categories_0206[i_0206]}");
             }
 
-            Console.Write("Enter category (1 - " + categories.Length + "): ");
-            string input = Console.ReadLine()!;
+            Console.Write("Enter category (1 - " + categories_0206.Length + "): ");
+            string input_0206 = Console.ReadLine()!;
 
-            if (string.IsNullOrWhiteSpace(input))
+            if (string.IsNullOrWhiteSpace(input_0206))
             {
                 Console.WriteLine("Input kategori tidak boleh kosong!\n");
                 continue;
             }
 
-            switch (input)
+            switch (input_0206)
             {
                 case "1":
-                    catIndex = 0;
+                    catIndex_0206 = 0;
                     break;
                 case "2":
-                    catIndex = 1;
+                    catIndex_0206 = 1;
                     break;
                 case "3":
-                    catIndex = 2;
+                    catIndex_0206 = 2;
                     break;
                 default:
                     Console.WriteLine("Kategori tidak valid! Coba lagi.\n");
                     continue;
             }
 
-            break; 
+            break;
         }
 
-        products[count++] = new Product
+        products_0206[count_0206++] = new Product
         {
             Id = id,
-            Name = name,
-            Stock = stock,
-            Price = price,
-            Category = categories[catIndex]
+            Name = name_0206,
+            Stock = stock_0206,
+            Price = price_0206,
+            Category = categories_0206[catIndex_0206]
         };
 
-        Console.WriteLine("\nProduct added successfully!\n");
+        Console.WriteLine("\nProduct berhasil ditambahkan!\n");
     }
 
 
@@ -215,7 +215,7 @@ class Program
         Console.Clear();
         Console.WriteLine("---EDIT PRODUCT---\n");
 
-        if (count == 0)
+        if (count_0206 == 0)
         {
             Console.WriteLine("Belum ada data produk!");
             return;
@@ -224,13 +224,13 @@ class Program
         ShowAll();
         Console.WriteLine();
 
-        int id;
+        int id_0206;
         while (true)
         {
             try
             {
                 Console.Write("Masukkan ID Product yang ingin diubah: ");
-                id = int.Parse(Console.ReadLine());
+                id_0206 = int.Parse(Console.ReadLine()!);
                 break;
             }
             catch
@@ -239,17 +239,17 @@ class Program
             }
         }
 
-        int index = -1;
-        for (int i = 0; i < count; i++)
+        int index_0206 = -1;
+        for (int i_0206 = 0; i_0206 < count_0206; i_0206++)
         {
-            if (products[i].Id == id)
+            if (products_0206[i_0206].Id == id_0206)
             {
-                index = i;
+                index_0206 = i_0206;
                 break;
             }
         }
 
-        if (index == -1)
+        if (index_0206 == -1)
         {
             Console.WriteLine("Product dengan ID tersebut tidak ditemukan!");
             return;
@@ -257,28 +257,28 @@ class Program
 
 
         Console.WriteLine("\nData Produk Saat Ini:");
-        Console.WriteLine($"Nama     : {products[index].Name}");
-        Console.WriteLine($"Stock    : {products[index].Stock}");
-        Console.WriteLine($"Harga    : {products[index].Price}");
-        Console.WriteLine($"Kategori : {products[index].Category}\n");
+        Console.WriteLine($"Nama     : {products_0206[index_0206].Name}");
+        Console.WriteLine($"Stock    : {products_0206[index_0206].Stock}");
+        Console.WriteLine($"Harga    : {products_0206[index_0206].Price}");
+        Console.WriteLine($"Kategori : {products_0206[index_0206].Category}\n");
 
         Console.WriteLine("Masukkan data baru (Enter untuk skip):");
 
         Console.Write("Nama Baru: ");
-        string input = Console.ReadLine()!;
-        if (!string.IsNullOrWhiteSpace(input))
-            products[index].Name = input;
+        string input_0206 = Console.ReadLine()!;
+        if (!string.IsNullOrWhiteSpace(input_0206))
+            products_0206[index_0206].Name = input_0206;
 
 
         while (true)
         {
             Console.Write("Stock Baru: ");
-            input = Console.ReadLine()!;
-            if (string.IsNullOrWhiteSpace(input)) break;
+            input_0206 = Console.ReadLine()!;
+            if (string.IsNullOrWhiteSpace(input_0206)) break;
 
             try
             {
-                products[index].Stock = int.Parse(input);
+                products_0206[index_0206].Stock = int.Parse(input_0206);
                 break;
             }
             catch
@@ -291,12 +291,12 @@ class Program
         while (true)
         {
             Console.Write("Harga Baru: ");
-            input = Console.ReadLine()!;
-            if (string.IsNullOrWhiteSpace(input)) break;
+            input_0206 = Console.ReadLine()!;
+            if (string.IsNullOrWhiteSpace(input_0206)) break;
 
             try
             {
-                products[index].Price = decimal.Parse(input);
+                products_0206[index_0206].Price = decimal.Parse(input_0206);
                 break;
             }
             catch
@@ -307,20 +307,20 @@ class Program
 
         Console.WriteLine("\nPilih Kategori Baru (Enter untuk skip):");
 
-        for (int i = 0; i < categories.Length; i++)
-            Console.WriteLine($"{i + 1}. {categories[i]}");
+        for (int i_0206 = 0; i_0206 < categories_0206.Length; i_0206++)
+            Console.WriteLine($"{i_0206 + 1}. {categories_0206[i_0206]}");
 
         Console.Write("Input Pilihan Category: ");
 
-        input = Console.ReadLine()!;
-        if (!string.IsNullOrWhiteSpace(input))
+        input_0206 = Console.ReadLine()!;
+        if (!string.IsNullOrWhiteSpace(input_0206))
         {
             try
             {
-                int catChoice = int.Parse(input);
-                if (catChoice >= 1 && catChoice <= categories.Length)
+                int catChoice = int.Parse(input_0206);
+                if (catChoice >= 1 && catChoice <= categories_0206.Length)
                 {
-                    products[index].Category = categories[catChoice - 1];
+                    products_0206[index_0206].Category = categories_0206[catChoice - 1];
                 }
                 else
                 {
@@ -340,9 +340,9 @@ class Program
 
     static void DeleteProduct()
     {
-      Console.WriteLine("----DELETE PRODUCT----");
+        Console.WriteLine("----DELETE PRODUCT----");
 
-      if(count == 0)
+        if (count_0206 == 0)
         {
             Console.WriteLine("Tidak ada product untuk dihapus");
             return;
@@ -351,35 +351,41 @@ class Program
         ShowAll();
         Console.WriteLine();
 
-        int id;
-        while(true)
+        int id_0206;
+        while (true)
         {
             Console.Write("Input ID produk yang ingin dihapus: ");
-            if(int.TryParse(Console.ReadLine(), out id))
-            break;
 
-            Console.WriteLine("ID harus berupa angka!");
-        }
-        int index = -1;
-        for(int i = 0; i < count; i++)
-        {
-            if(products[i].Id == id)
+            try
             {
-                index = i;
+                id_0206 = int.Parse(Console.ReadLine()!);
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("ID harus berupa angka!");
+            }
+        }
+        int index_0206 = -1;
+        for (int i_0206 = 0; i_0206 < count_0206; i_0206++)
+        {
+            if (products_0206[i_0206].Id == id_0206)
+            {
+                index_0206 = i_0206;
                 break;
             }
         }
-        if (index == -1)
+        if (index_0206 == -1)
         {
             Console.WriteLine("Produk dengan ID tersebut tidak ditemukan");
             return;
         }
-        for (int i = index; i < count - 1; i++)
+        for (int i = index_0206; i < count_0206 - 1; i++)
         {
-            products[i] = products[i + 1];
+            products_0206[i] = products_0206[i + 1];
         }
 
-        count--;
+        count_0206--;
 
         Console.WriteLine("Produk berhasil dihapus!");
     }
@@ -387,92 +393,89 @@ class Program
     static void SearchProduct()
     {
         Console.Write("Enter keyword: ");
-        string keyword = Console.ReadLine()!.ToLower();
+        string keyword_0206 = Console.ReadLine()!.ToLower();
 
-        var results = products
-            .Where(p => p != null && p.Name.ToLower().Contains(keyword))
+        var results_0206 = products_0206
+            .Where(p_0206 => p_0206 != null && p_0206.Name.ToLower().Contains(keyword_0206))
             .ToList();
 
-        if (!results.Any())
+        if (!results_0206.Any())
         {
             Console.WriteLine("No products found!");
             return;
         }
 
         Console.WriteLine("\n--- SEARCH RESULTS ---");
-        foreach (var p in results)
-            Console.WriteLine($"ID: {p.Id}, {p.Name}, Cat: {p.Category}, Rp {p.Price:N0}");
+        foreach (var p_0206 in results_0206)
+            Console.WriteLine($"ID: {p_0206.Id}, {p_0206.Name}, Category: {p_0206.Category}, Rp {p_0206.Price:N0}");
     }
-    
+
     static void FilterByCategory()
-{
-    Console.WriteLine("--- FILTER BY CATEGORY ---\n");
-
-    if (count == 0)
     {
-        Console.WriteLine("Tidak ada produk dalam sistem.");
-        return;
-    }
+        Console.WriteLine("--- FILTER BY CATEGORY ---\n");
 
-    
-    for (int i = 0; i < categories.Length; i++)
-    {
-        Console.WriteLine((i + 1) + ". " + categories[i]);
-    }
-
-    int pilih = 0;
-    bool inputValid = false;
-
-    
-    while (!inputValid)
-    {
-        Console.Write("\nPilih kategori (1 - " + categories.Length + "): ");
-
-        try
+        if (count_0206 == 0)
         {
-            pilih = int.Parse(Console.ReadLine());
+            Console.WriteLine("Tidak ada produk dalam sistem.");
+            return;
+        }
 
-            
-            if (pilih < 1 || pilih > categories.Length)
+
+        for (int i_0206 = 0; i_0206 < categories_0206.Length; i_0206++)
+        {
+            Console.WriteLine(i_0206 + 1 + ". " + categories_0206[i_0206]);
+        }
+
+        int pilih_0206 = 0;
+        bool inputValid_0206 = false;
+
+
+        while (!inputValid_0206)
+        {
+            Console.Write("\nPilih kategori (1 - " + categories_0206.Length + "): ");
+
+            try
             {
-                Console.WriteLine(" Pilihan tidak tersedia, silakan pilih sesuai nomor kategori.");
+                pilih_0206 = int.Parse(Console.ReadLine()!);
+
+
+                if (pilih_0206 < 1 || pilih_0206 > categories_0206.Length)
+                {
+                    Console.WriteLine(" Pilihan tidak tersedia, silakan pilih sesuai nomor kategori.");
+                }
+                else
+                {
+                    inputValid_0206 = true;
+                }
             }
-            else
+            catch
             {
-                inputValid = true; 
+                Console.WriteLine(" Input harus berupa angka!");
             }
         }
-        catch
+
+        string kategori_0206 = categories_0206[pilih_0206 - 1];
+        bool ada_0206 = false;
+
+        Console.WriteLine("\n--- Produk kategori: " + kategori_0206 + " ---\n");
+
+        for (int i_0206 = 0; i_0206 < count_0206; i_0206++)
         {
-            Console.WriteLine(" Input harus berupa angka!");
+            if (products_0206[i_0206].Category == kategori_0206)
+            {
+                Console.WriteLine(
+                    "ID: " + products_0206[i_0206].Id +
+                    " | " + products_0206[i_0206].Name +
+                    " | Stock: " + products_0206[i_0206].Stock +
+                    " | Price: Rp " + products_0206[i_0206].Price.ToString("N0")
+                );
+                ada_0206 = true;
+            }
+        }
+
+        if (!ada_0206)
+        {
+            Console.WriteLine("Tidak ada produk dalam kategori ini.");
         }
     }
-
-    string kategori = categories[pilih - 1];
-    bool ada = false;
-
-    Console.WriteLine("\n--- Produk kategori: " + kategori + " ---\n");
-
-    for (int i = 0; i < count; i++)
-    {
-        if (products[i].Category == kategori)
-        {
-            Console.WriteLine(
-                "ID: " + products[i].Id +
-                " | " + products[i].Name +
-                " | Stock: " + products[i].Stock +
-                " | Price: Rp " + products[i].Price.ToString("N0")
-            );
-            ada = true;
-        }
-    }
-
-    if (!ada)
-    {
-        Console.WriteLine("Tidak ada produk dalam kategori ini.");
-    }
-}
-
-
-
 }
